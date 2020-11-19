@@ -36,7 +36,7 @@
       </transition>
 
       <ion-button v-if="!isDetail" color="medium" @click="changeToDeTails()" shape="round" expand="block" >Pokaż detale</ion-button>
-      <ion-button v-if="isDetail" @click="changeToDeTails()" shape="round" expand="block" >Wróć</ion-button>
+      <ion-button v-if="isDetail" color="medium" @click="changeToDeTails()" shape="round" expand="block" >Wróć</ion-button>
     </ion-content>
   </ion-page>
 </template>
@@ -52,7 +52,7 @@ import CurrentWeatherDetails from "@/components/CurrentWeatherDetails";
 export default {
   name: 'Tab1',
   components: {CurrentWeatherDetails, CurrentWeather, IonButton, IonContent, IonPage, IonSearchbar, IonToolbar, IonSpinner},
-  beforeMount() {
+  created() {
     this.loading = true;
     Storage.get({key: 'townName'}).then((name) => { this.townName = name.value})
     .then(() => {
