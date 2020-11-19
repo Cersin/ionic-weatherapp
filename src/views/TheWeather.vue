@@ -83,7 +83,7 @@ export default {
     getWeather() {
       this.error = '';
       if (this.townName === null) {
-        axios.get('http://api.openweathermap.org/data/2.5/weather?q=Warszawa&appid=7ded97f2e0ce975b4a0bc4630332feec&units=metric&lang=pl')
+        axios.get('https://api.openweathermap.org/data/2.5/weather?q=Warszawa&appid=7ded97f2e0ce975b4a0bc4630332feec&units=metric&lang=pl')
             .then((res) => {
               this.weatherDescription = res.data.weather[0];
               this.weatherMain = res.data.main;
@@ -98,7 +98,7 @@ export default {
           this.error = 'Złe miasto lub coś nie tak z połączeniem';
         })
       } else {
-        axios.get('http://api.openweathermap.org/data/2.5/weather?q=' + this.townName +'&appid=7ded97f2e0ce975b4a0bc4630332feec&units=metric&lang=pl')
+        axios.get('https://api.openweathermap.org/data/2.5/weather?q=' + this.townName +'&appid=7ded97f2e0ce975b4a0bc4630332feec&units=metric&lang=pl')
             .then((res) => {
               this.weatherDescription = res.data.weather[0];
               this.weatherMain = res.data.main;
@@ -166,17 +166,17 @@ ion-searchbar {
 }
 
 .weather-enter-active {
-  animation: changeDetails 1s ease-in;
+  animation: changeDetails 0.5s ease-in;
 }
 
 .weather-leave-active {
-  animation: changeDetails 1s ease-out reverse;
+  animation: changeDetails 0.5s ease-out reverse;
 }
 
 @keyframes changeDetails {
   0% {
     opacity: 0;
-    transform: translateX(-300px) scale(0) skewY(180deg)
+    transform: translateX(-150px) scale(0) skewY(90deg)
   }
 
   100% {

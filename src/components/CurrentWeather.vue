@@ -7,7 +7,7 @@
         <slot></slot>
       </ion-card-subtitle>
     <ion-card-title>
-      <ion-img :src="'http://openweathermap.org/img/wn/' + description.icon  + '@4x.png'"></ion-img>
+      <ion-img :src="'https://openweathermap.org/img/wn/' + description.icon  + '@4x.png'"></ion-img>
     </ion-card-title>
 
     <ion-card-content>
