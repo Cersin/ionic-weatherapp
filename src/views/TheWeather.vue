@@ -35,7 +35,7 @@
         </current-weather-details>
       </transition>
 
-      <ion-button v-if="!isDetail" @click="changeToDeTails()" shape="round" expand="block" >Pokaż detale</ion-button>
+      <ion-button v-if="!isDetail" color="medium" @click="changeToDeTails()" shape="round" expand="block" >Pokaż detale</ion-button>
       <ion-button v-if="isDetail" @click="changeToDeTails()" shape="round" expand="block" >Wróć</ion-button>
     </ion-content>
   </ion-page>
