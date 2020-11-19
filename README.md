@@ -1,4 +1,5 @@
 ![](appgif.gif)
+
 RUN ionic server in console to run application or install APK with your mobile phone.
 More info:
 https://ionicframework.com/docs/intro/cli
